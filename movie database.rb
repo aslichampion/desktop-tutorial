@@ -1,16 +1,19 @@
-class String #this allows me to append titleize on to any string
+# class String definition method allows me to append titleize on to any string
+# output of puts movies is for testing purposes only to ensure keys are formatted as symbols
+
+class String
     def titleize
       self.split(" ").map{|word| word.capitalize}.join(" ")
     end
-  end
+end
 
 movies = {
     avengers_endgame: 5,
     memento: 4
-    }
+}    
+
 puts "What would you like to do?"
 choice = gets.chomp
-  
 case choice
     when "add"
       puts "What is the Movie title?"
@@ -20,8 +23,8 @@ case choice
         puts "What is the rating?"
         rating = gets.chomp.to_i
         movies[title] = rating
-        puts "Great, #{title.to_s.tr('_', ' ').capitalize} has been added"
-        puts movies #for checking hash entries
+        puts "Great, #{title.to_s.tr('_', ' ').titleize} has been added"
+        puts movies
         else
         puts "Hmm, #{title.to_s.tr('_', ' ').titleize} is already in the list"
         end
@@ -32,6 +35,4 @@ case choice
     when "delete"
       puts "Deleted!"
     else puts "Error!"
-  end
-  
-  
+end
