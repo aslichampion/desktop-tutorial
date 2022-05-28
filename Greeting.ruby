@@ -20,4 +20,4 @@ state = gets.chomp.split(/ |\_/).map(&:capitalize).join(" ")
 
 #.split.map(&:capitalize).join(" ")
 
-print "Great, so you are #{first_name} #{last_name} from #{city}, #{state2}, nice to meet you!"
+print "Great, so you are #{first_name} #{last_name} from #{city}, #{state}, nice to meet you!"
