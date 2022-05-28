@@ -4,14 +4,14 @@ class String #this allows me to append titleize on to any string
     end
   end
 
-  movies = {
+movies = {
     avengers_endgame: 5,
     memento: 4
     }
-  puts "What would you like to do?"
-  choice = gets.chomp
+puts "What would you like to do?"
+choice = gets.chomp
   
-  case choice
+case choice
     when "add"
       puts "What is the Movie title?"
       title = gets.chomp.downcase.split.join('_').to_sym
